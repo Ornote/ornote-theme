@@ -3,4 +3,4 @@ Ornote Theme Drupal 8
 
 ## Work in progress ;)
 
-###Finally, I hope
+Finally, I hope
