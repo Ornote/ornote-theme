@@ -1,0 +1,18 @@
+or_apple_touch : 1
+or_cleartype : 1
+or_viewport : 1
+or_viewport_initial_scale : '1.0'
+or_viewport_user_scaleable : 1
+or_viewport_minimum_scale : '1.0'
+or_viewport_maximum_scale : '1.0'
+or_placeholder_js : 1
+or_enquire_js : 0
+or_lodash_js : 1
+or_show_window_size : 0
+or_breadcrumb_separator : ' › '
+or_breadcrumb_home : 1
+or_breadcrumb_trailing : 0
+or_breadcrumb_title : 0
+or_show_grid : 0
+or_show_responsive_identifier : 0
+or_layout_tabs : 1

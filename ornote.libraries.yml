@@ -1,0 +1,21 @@
+base:
+  version: 1x
+
+  js:
+    front/js/ornote.js: {}
+    front/js/lib/angular.min.js: {}
+    front/js/lib/prism.js: {}
+  dependencies:
+    - core/jquery
+    - core/jquery.once
+    - core/drupal.ajax
+    - core/drupal
+    - core/drupalSettings
+    - core/modernizr
+    - core/underscore
+
+  css:
+    theme:
+      front/style/ornote.css: {}
+      front/style/vendor/prism.css: {}
+

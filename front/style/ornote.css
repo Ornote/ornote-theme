@@ -1,0 +1,100 @@
+@font-face {
+  font-family: roboto-body;
+  src: url("../font/Roboto-Medium.ttf"); }
+@font-face {
+  font-family: roboto-title;
+  src: url("../font/Roboto-Black.ttf"); }
+@font-face {
+  font-family: roboto-italic;
+  src: url("../font/Roboto-Italic.ttf"); }
+/* RAZ style nav */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%); }
+
+body {
+  height: 100vh;
+  font-size: 14px;
+  font-family: roboto-body, sans-serif;
+  color: #9b9b9b;
+  position: relative;
+  transition-duration: 1s;
+  overflow: hidden; }
+  body:before {
+    content: "";
+    background: url("../images/eyes.png") no-repeat;
+    width: 511px;
+    height: 185px;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.04;
+    animation: bg-anim 18s ease-in-out infinite; }
+
+/* Animation background */
+@keyframes bg-anim {
+  0% {
+    opacity: 0.002; }
+  15% {
+    opacity: 0.03; }
+  30% {
+    opacity: 0.05; }
+  50% {
+    opacity: 0.08; }
+  65% {
+    opacity: 0.05; }
+  80% {
+    opacity: 0.02; }
+  100% {
+    opacity: 0; } }
+h1 {
+  font-family: roboto-title, sans-serif;
+  font-size: 3.5rem;
+  background: -webkit-linear-gradient(#38495a, white);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding-top: 2rem;
+  text-align: center;
+  font-weight: normal;
+  letter-spacing: 0.15rem; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+li {
+  list-style: none; }
+
+.footer-temp {
+  width: 100vw;
+  font-size: 1.5rem;
+  text-align: center;
+  position: absolute;
+  bottom: 1rem;
+  animation: cs-anim 18s ease-in-out;
+  padding: 0 1.5rem;
+  max-height: 3.5rem; }
+  .footer-temp h2 {
+    padding-top: .5rem;
+    background: -webkit-linear-gradient(white, #38495a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; }
+  .footer-temp:before {
+    content: "";
+    display: block;
+    height: .1rem;
+    background: linear-gradient(to left, #11998e, #38ef7d); }
+
+@keyframes cs-anim {
+  0% {
+    bottom: -170rem; }
+  100% {
+    bottom: 1rem; } }
+
+/*# sourceMappingURL=ornote.css.map */

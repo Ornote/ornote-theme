@@ -1,0 +1,8 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the ornote theme.
+ */
+
+require_once dirname(__FILE__) . '/includes/ornote.inc';
