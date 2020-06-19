@@ -41,11 +41,11 @@
 
 {%
   set body_classes = [
-    logged_in ? 'ornote-log',
-    not root_path ? 'ornote-hp' : 'path-' ~ root_path|clean_class,
-    node_type ? 'ornote--' ~ node_type|clean_class,
-    db_offline ? 'db-offline',
-  ]
+  logged_in ? 'ornote-log',
+  not root_path ? 'ornote' : 'path-' ~ root_path|clean_class,
+  node_type ? 'ornote-' ~ node_type|clean_class,
+  db_offline ? 'db-offline',
+]
 %}
 <!DOCTYPE html>
 <html{{ html_attributes }} ng-app>
@@ -53,15 +53,12 @@
   <head-placeholder token="{{ placeholder_token|raw }}">
     <title>{{ head_title|safe_join(' - ') }}</title>
     <css-placeholder token="{{ placeholder_token|raw }}">
-    <js-placeholder token="{{ placeholder_token|raw }}">
-    <js-bottom-placeholder token="{{ placeholder_token|raw }}">
-</head>
-<body class="ornote-body" ng-controller="OrnoteControler">
-
-<a href="#main-content" class="visually-hidden focusable skip-link">{{ 'Skip to main content'|t }}</a>
+      <js-placeholder token="{{ placeholder_token|raw }}">
+        <js-bottom-placeholder token="{{ placeholder_token|raw }}">
+          </head>
+<body {{ attributes.addClass(body_classes) }} ng-controller="OrnoteControler">
 {{ page_top }}
 {{ page }}
 {{ page_bottom }}
-
 </body>
 </html>
