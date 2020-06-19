@@ -45,49 +45,41 @@
  * @ingroup themeable
  */
 #}
+<header class="ornote-head">
+  {{ page.header }}
+</header>
+{% if page.navigation %}
+  <nav class="ornote-nav">
+    {{ page.navigation }}
+  </nav>
+{% endif %}
+<main class="warpper">
 
-<div class="warpper">
-  <header class="col-xl-12 col-lg-12 col-md-fluid-12 center-element">
-    {{ page.header }}
-  </header>
+  {{ page.breadcrumb }}
 
-  {% if page.navigation %}
-    <div class="navigation">
-      {{ page.navigation }}
+  {% if messages %}
+    <div class="messages">
+      {{ messages }}
     </div>
   {% endif %}
+  {{ page.help }}
 
-  <div class="wrapper-inner">
-    {{ page.breadcrumb }}
+  {% if page.highlighted %}
+    <div class="highlighted">{{ page.highlighted }}</div>
+  {% endif %}
 
-    <section class="wrapper-inner--content">
-      {% if messages %}
-        <div class="messages">
-          {{ messages }}
-        </div>
-      {% endif %}
-      {{ page.help }}
 
-      {% if page.highlighted %}
-        <div class="highlighted">{{ page.highlighted }}</div>
-      {% endif %}
+  {{ page.content }}
 
-      <a id="main-content" tabindex="-1"></a>
-
-      {{ page.content }}
-    </section>
-
-    {% if page.sidebar %}
-      <aside class="column sidebar col-xl-4 col-lg-4 col-md-fluid-12">
-        {{ page.sidebar }}
-      </aside>
-    {% endif %}
-
-  </div>
+  {% if page.sidebar %}
+    <aside class="column sidebar col-xl-4 col-lg-4 col-md-fluid-12">
+      {{ page.sidebar }}
+    </aside>
+  {% endif %}
 
   {% if page.footer %}
-    <footer class="footer">
-      {{ page.footer }}
-    </footer>
-</div>
+  <footer class="footer">
+    {{ page.footer }}
+  </footer>
+</main>
 {% endif %}
